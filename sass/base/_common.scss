@@ -1,0 +1,26 @@
+body {
+  background-color: var(--primary-white-color);
+  color: var(--primary-text-color);
+
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.list,
+.link,
+.logo {
+  text-decoration: none;
+  list-style: none;
+}
+.btn {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

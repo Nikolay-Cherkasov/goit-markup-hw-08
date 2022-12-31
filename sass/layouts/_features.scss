@@ -1,0 +1,40 @@
+.features {
+  padding: 60px 0px;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0px;
+  }
+}
+.features__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.features__item {
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+.features__title {
+  margin-bottom: 10px;
+
+  @include font($fw: 700, $lh: 16);
+  text-align: center;
+  text-transform: uppercase;
+}
+.features__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--bcg-team-color);
+}
+
+.features__text {
+  color: var(--subtitle-text-color);
+}

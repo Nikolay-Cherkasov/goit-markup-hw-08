@@ -1,0 +1,126 @@
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+  background-color: var(--primary-white-color);
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  &.is-open {
+    transform: translateX(0);
+  }
+}
+.mobile-container {
+  position: relative;
+  display: block;
+  padding: 48px 40px;
+  height: 100%;
+  & .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+}
+.mob-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  height: 100%;
+}
+.mob-navigation__list {
+  display: block;
+  & .current {
+    text-decoration: none;
+    color: var(--accent-color);
+  }
+}
+.mob-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-navigation__link {
+  @include font($fs: 40, $fw: 500, $lh: 47, $ls: 0.02);
+
+  color: var(--primary-text-color);
+
+  transition: color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.mob-connection__list {
+  margin-bottom: 64px;
+}
+.mob-connection__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-connection__link-tel {
+  color: var(--subtitle-text-color);
+
+  @include font($fs: 34, $fw: 500, $lh: 40, $ls: 0.02);
+  transition: color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.mob-connection__link-mail {
+  color: var(--subtitle-text-color);
+
+  @include font($fs: 24, $fw: 500, $lh: 28, $ls: 0.02);
+  transition: color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.mob-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.mob-social-list__item {
+  position: relative;
+  &:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    right: -10px;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+.mob-social-list__link {
+  @include font($fs: 18, $fw: 500, $lh: 22, $ls: 0.02);
+  color: var(--accent-color);
+}

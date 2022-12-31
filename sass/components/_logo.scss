@@ -1,0 +1,17 @@
+.logo {
+  display: inline-block;
+  color: var(--accent-color);
+
+  padding: 24px 0px 25px;
+  @media screen and (max-width: 767px) {
+    padding: 16px;
+  }
+  font-family: "Raleway", sans-serif;
+  @include font($fs: 26, $lh: 31);
+}
+.logo--dark-color {
+  color: var(--accent-text-color);
+}
+.logo--light-color {
+  color: var(--primary-white-color);
+}

@@ -1,0 +1,99 @@
+.portfolio {
+  padding: 94px 0px;
+}
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 8px;
+  @media screen and (max-width: 767px) {
+    justify-content: start;
+  }
+}
+
+.filtres__btn {
+  padding: 6px 22px;
+  min-width: 73px;
+
+  color: var(--primary-text-color);
+  background-color: var(--bcg-team-color);
+
+  font-family: inherit;
+  @include font($fs: 16, $fw: 500, $lh: 26);
+
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  & .link:hover .projects__overlay-text {
+    transform: translateY(0);
+  }
+  & .link:focus .projects__overlay-text {
+    transform: translateY(0);
+  }
+}
+.projects__overlay {
+  position: relative;
+  overflow: hidden;
+}
+.projects__overlay-text {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--accent-color);
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+
+.projects__overlay-text {
+  color: var(--primary-white-color);
+
+  padding: 63px 24px;
+  margin: 0;
+  @include font($fs: 18, $lh: 28);
+}
+
+.projects__wrapper {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-cards-portfolio);
+  border-left: 1px solid var(--border-cards-portfolio);
+  border-bottom: 1px solid var(--border-cards-portfolio);
+}
+.projects__item {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
+  transition: box-shadow 250ms var(--timing-function);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.projects__title {
+  color: var(--primary-text-color);
+
+  margin-bottom: 4px;
+  @include font($fs: 18, $fw: null, $lh: 36, $ls: 0.06);
+}
+.projects__text {
+  color: var(--subtitle-text-color);
+
+  @include font($fs: 16, $lh: 30);
+}
