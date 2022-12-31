@@ -136,6 +136,10 @@
   margin-bottom: 30px;
 
   @include font($fs: 12, $fw: 400, $lh: 14, $ls: 0.03);
+
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 14, $fw: 400, $lh: 24, $ls: 0.03);
+  }
 }
 .modal-form__check-icon {
   display: block;

@@ -92,6 +92,9 @@
   &:focus {
     color: var(--accent-color);
   }
+  @media screen and (max-width: 449px) {
+    @include font($fs: 27, $fw: 500, $lh: 40, $ls: 0.02);
+  }
 }
 .mob-connection__link-mail {
   color: var(--subtitle-text-color);

@@ -5,6 +5,7 @@
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -44,8 +45,8 @@
   color: var(--primary-white-color);
 }
 .footer__social-wrapper {
-  max-width: 206px;
-  height: 80px;
+  // max-width: 206px;
+  // height: 80px;
 }
 .footer__social-title {
   font-family: inherit;

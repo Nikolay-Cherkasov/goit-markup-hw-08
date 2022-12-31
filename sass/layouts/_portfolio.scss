@@ -42,6 +42,11 @@
     transform: translateY(0);
   }
 }
+.projects__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .projects__overlay {
   position: relative;
   overflow: hidden;
@@ -68,6 +73,7 @@
 }
 
 .projects__wrapper {
+  flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid var(--border-cards-portfolio);
   border-left: 1px solid var(--border-cards-portfolio);
